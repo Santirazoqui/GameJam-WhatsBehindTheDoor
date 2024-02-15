@@ -236,6 +236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorsToUse: []
+  startDoor: {fileID: 8214101717830815759, guid: f90f33589513f3445a2e591fbd8f1fc7, type: 3}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -379,6 +380,10 @@ PrefabInstance:
     - target: {fileID: 8214101717830815759, guid: f90f33589513f3445a2e591fbd8f1fc7, type: 3}
       propertyPath: m_Name
       value: Door Start
+      objectReference: {fileID: 0}
+    - target: {fileID: 8214101717830815759, guid: f90f33589513f3445a2e591fbd8f1fc7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
