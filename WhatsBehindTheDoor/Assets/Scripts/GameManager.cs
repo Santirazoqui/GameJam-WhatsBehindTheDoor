@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
 
     public void LoadNextDoor()
     {
+        if(debugging){ return; }
+
         currentDoor++;
         if(currentDoor < firstDoorsToUse.Count)
         {
@@ -21,9 +23,19 @@ public class GameManager : MonoBehaviour
                     Quaternion.identity
                     );
         } 
+        else if (doorsToUse.Count > 0)
+        {
+            int index = Random.Range(0, doorsToUse.Count - 1);
+            Instantiate(doorsToUse[index], 
+                    doorSpawnPosition,
+                    Quaternion.identity
+                    );
+            doorsToUse.RemoveAt(index);
+            //Load random door form the other ones
+        }
         else
         {
-            //Load random door form the other ones
+            Debug.Log("Finish!");
         }
 
     }

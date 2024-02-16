@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class WindowBreak : MonoBehaviour
 {
+    [SerializeField] Door door;
     [SerializeField] List<Sprite> windowBreakSteps;
     private int currentStep = 0;
 
     [SerializeField] GameObject breakWindowButton;
 
     [Header("Audio")]
-    [SerializeField] AudioClip breakGlassClip;
     [SerializeField] [Range(0f, 1f)] float breakGlassVolume = 0.2f;
     [SerializeField] List<AudioClip> glassBreakAudioClips;
 
@@ -28,13 +28,14 @@ public class WindowBreak : MonoBehaviour
         if(currentStep < windowBreakSteps.Count)
         {
             spriteRenderer.sprite = windowBreakSteps[currentStep];
-            this.audioPlayer.PlayClip(glassBreakAudioClips[currentStep], 0.2f);
+            this.audioPlayer.PlayClip(glassBreakAudioClips[currentStep], breakGlassVolume);
             currentStep++;
         }
 
         if(currentStep == windowBreakSteps.Count)
         {
             breakWindowButton.SetActive(false);
+            this.door.SetLocked(false);
         }
     }
 }
