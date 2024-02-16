@@ -17,14 +17,12 @@ public class Door : MonoBehaviour
 
     public void OpenDoor()
     {
-        if(this.isLocked == true)
+        if(isLocked)
         {
-            Debug.Log("Is locked");
             this.audioPlayer.PlayLockedDoorClip();
         } 
         else
         {
-            Debug.Log("Is NOT locked");
             //Call Game manager to load new door (behind current one)
             this.gameManager.LoadNextDoor();
             this.audioPlayer.PlayOpenDoorClip();
@@ -53,9 +51,8 @@ public class Door : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetLocked(bool isLocked)
     {
-        
+        this.isLocked = isLocked;
     }
 }
