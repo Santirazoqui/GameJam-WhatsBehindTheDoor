@@ -230,6 +230,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 5536228500786818055}
+  lockButton: {fileID: 3092268270211327513}
+  keyButton: {fileID: 1254150470351331752}
   lockedClip: {fileID: 8300000, guid: fb65cbb3e4059dd46b461fc5af6dd275, type: 3}
   lockedVolume: 0.2
   openedClip: {fileID: 8300000, guid: 7656e79fdb86a4f43aaa8c02d41ae677, type: 3}

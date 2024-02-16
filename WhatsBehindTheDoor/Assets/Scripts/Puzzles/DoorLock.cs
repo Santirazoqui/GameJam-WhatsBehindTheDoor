@@ -5,6 +5,8 @@ using UnityEngine;
 public class DoorLock : MonoBehaviour
 {
     [SerializeField] Door door;
+    [SerializeField] GameObject lockButton;
+    [SerializeField] GameObject keyButton;
 
     [Header("Audio Clips")]
     [SerializeField] AudioClip lockedClip;
@@ -36,6 +38,12 @@ public class DoorLock : MonoBehaviour
             Rigidbody2D openedLockRigidBody = gameObject.AddComponent<Rigidbody2D>();
             this.audioPlayer.PlayClip(openedClip, openedVolume);
             this.door.SetLocked(false);
+
+            this.lockButton.SetActive(false);
+            this.keyButton.SetActive(false);
+            
+            
+            Destroy(gameObject, 5);
         }
     }
 

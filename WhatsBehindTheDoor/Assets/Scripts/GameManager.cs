@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] List<GameObject> doorsToUse;
     [SerializeField] List<GameObject> firstDoorsToUse;
+    [SerializeField] bool debugging = false;
 
     private readonly Vector3 doorSpawnPosition = new Vector3(-1.5f, 1.31f, 0);
     private int currentDoor = 0;
@@ -29,10 +30,12 @@ public class GameManager : MonoBehaviour
 
     public void Start()
     {
-        Instantiate(firstDoorsToUse[0], 
-                    doorSpawnPosition,
-                    Quaternion.identity
-                    );
-
+        if(!debugging)
+        {
+            Instantiate(firstDoorsToUse[0], 
+                        doorSpawnPosition,
+                        Quaternion.identity
+                        );
+        }
     }
 }
