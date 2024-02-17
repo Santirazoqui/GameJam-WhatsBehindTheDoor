@@ -6,15 +6,22 @@ public class Door : MonoBehaviour
 {
     [SerializeField] bool isLocked = true;
     [SerializeField] GameObject openDoorButton;
-    private GameManager gameManager;
-    private AudioPlayer audioPlayer;
 
     [SerializeField] List<GameObject> propsToDestroy;
+
+    [Header("Flip door")]
+    [SerializeField] bool changeSpriteAfterFlip = false;
+    [SerializeField] Sprite spriteAfterFlip;
+
+    private GameManager gameManager;
+    private AudioPlayer audioPlayer;
+    private SpriteRenderer spriteRenderer;
 
     void Awake()
     {
         this.gameManager = FindObjectOfType<GameManager>();
         this.audioPlayer = FindObjectOfType<AudioPlayer>();
+        this.spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     public void OpenDoor()
@@ -48,6 +55,10 @@ public class Door : MonoBehaviour
             if (sprite && rotation == -90)
             {
                 sprite.sortingOrder = -sprite.sortingOrder;
+                if(this.changeSpriteAfterFlip && this.spriteAfterFlip != null)
+                {
+                    this.spriteRenderer.sprite = this.spriteAfterFlip;
+                }
             }
 
             yield return new WaitForSeconds(0.005f);

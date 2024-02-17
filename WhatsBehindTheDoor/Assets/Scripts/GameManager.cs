@@ -4,16 +4,20 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] List<GameObject> doorsToUse;
+    [Header("Doors")]
     [SerializeField] List<GameObject> firstDoorsToUse;
-    [SerializeField] bool debugging = false;
+    [SerializeField] List<GameObject> doorsToUse;
+    [SerializeField] List<GameObject> lastDoorsToUse;
+
+
+    [SerializeField] bool testingOrDebugging = false;
 
     private readonly Vector3 doorSpawnPosition = new Vector3(-1.5f, 1.31f, 0);
     private int currentDoor = 0;
 
     public void LoadNextDoor()
     {
-        if(debugging){ return; }
+        if(testingOrDebugging){ return; }
 
         currentDoor++;
         if(currentDoor < firstDoorsToUse.Count)
@@ -34,7 +38,15 @@ public class GameManager : MonoBehaviour
                     Quaternion.identity
                     );
             doorsToUse.RemoveAt(index);
-            //Load random door form the other ones
+        } 
+        else if (lastDoorsToUse.Count > 0)
+        {
+            int index = Random.Range(0, lastDoorsToUse.Count - 1);
+            Instantiate(lastDoorsToUse[index], 
+                    new Vector3(0, 0, 0),
+                    Quaternion.identity
+                    );
+            lastDoorsToUse.RemoveAt(index);
         }
         else
         {
@@ -45,7 +57,7 @@ public class GameManager : MonoBehaviour
 
     public void Start()
     {
-        if(!debugging)
+        if(!testingOrDebugging)
         {
             Instantiate(firstDoorsToUse[0], 
                         doorSpawnPosition,

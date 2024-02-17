@@ -7,6 +7,7 @@ public class RiddleDoor : MonoBehaviour
 {
     private SpriteRenderer spriteRenderer;
     [SerializeField] Sprite openViewframeSprite;
+    [SerializeField] Door riddleDoor;
 
     [Header("Canvas")]
     [SerializeField] GameObject openViewFrameButton;
@@ -37,7 +38,8 @@ public class RiddleDoor : MonoBehaviour
         else
         {
             StartCoroutine(GuardAnswer("Very well, you may enter..."));
-            //unlock door
+            Destroy(this.riddleCanvas, 4f);
+            this.riddleDoor.SetLocked(false);
         }
     }
 
