@@ -788,6 +788,10 @@ PrefabInstance:
       value: Lever
       objectReference: {fileID: 0}
     - target: {fileID: 2364117981065468994, guid: 1a681a6877fbf7045afe40653725eccc, type: 3}
+      propertyPath: pullClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 9b2aabd7a0d69604482f905c2c5ef6ea, type: 3}
+    - target: {fileID: 2364117981065468994, guid: 1a681a6877fbf7045afe40653725eccc, type: 3}
       propertyPath: leverDoor
       value: 
       objectReference: {fileID: 1795122269772745816}
@@ -890,6 +894,10 @@ PrefabInstance:
       value: Lever 2
       objectReference: {fileID: 0}
     - target: {fileID: 2364117981065468994, guid: 1a681a6877fbf7045afe40653725eccc, type: 3}
+      propertyPath: pullClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 9b2aabd7a0d69604482f905c2c5ef6ea, type: 3}
+    - target: {fileID: 2364117981065468994, guid: 1a681a6877fbf7045afe40653725eccc, type: 3}
       propertyPath: leverDoor
       value: 
       objectReference: {fileID: 1795122269772745816}
@@ -991,6 +999,10 @@ PrefabInstance:
       propertyPath: isUp
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2364117981065468994, guid: 1a681a6877fbf7045afe40653725eccc, type: 3}
+      propertyPath: pullClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 9b2aabd7a0d69604482f905c2c5ef6ea, type: 3}
     - target: {fileID: 2364117981065468994, guid: 1a681a6877fbf7045afe40653725eccc, type: 3}
       propertyPath: leverDoor
       value: 
