@@ -381,7 +381,7 @@ MonoBehaviour:
   - {fileID: 8535668949269682018, guid: be9e7a7900564c04c8f5326ecb8d472a, type: 3}
   - {fileID: 7037856170832623157, guid: 6ea094f4495e1c54595c39078316b4c0, type: 3}
   endingDoor: {fileID: 1472220667}
-  testingOrDebugging: 1
+  testingOrDebugging: 0
 --- !u!1 &937130433
 GameObject:
   m_ObjectHideFlags: 0
