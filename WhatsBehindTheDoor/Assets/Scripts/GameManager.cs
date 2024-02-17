@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] List<GameObject> firstDoorsToUse;
     [SerializeField] List<GameObject> doorsToUse;
     [SerializeField] List<GameObject> lastDoorsToUse;
-
+    [SerializeField] GameObject endingDoor;
 
     [SerializeField] bool testingOrDebugging = false;
 
@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
         } 
         else if (doorsToUse.Count > 0)
         {
-            int index = Random.Range(0, doorsToUse.Count - 1);
+            int index = 0; //Random.Range(0, doorsToUse.Count - 1);
             //En este caso la pos del Instantiate es porque quedo algo mal con las puertas. Las que estan abajo de un empry object spawnean mal 
             //por que el empty object es el que va a la pos. Voy a meter todas las nuevas abajo de un empty object y dejar las primeras quietas por tiempo
 
@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
         } 
         else if (lastDoorsToUse.Count > 0)
         {
-            int index = Random.Range(0, lastDoorsToUse.Count - 1);
+            int index = 0;//Random.Range(0, lastDoorsToUse.Count - 1);
             Instantiate(lastDoorsToUse[index], 
                     new Vector3(0, 0, 0),
                     Quaternion.identity
@@ -50,7 +50,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("Finish!");
+            endingDoor.SetActive(true);
         }
 
     }
