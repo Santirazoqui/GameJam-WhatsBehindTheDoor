@@ -380,6 +380,8 @@ MonoBehaviour:
   - {fileID: 6706611125609538968}
   - {fileID: 7547176632480017536}
   - {fileID: 5821399417552615595}
+  changeSpriteAfterFlip: 0
+  spriteAfterFlip: {fileID: 0}
 --- !u!114 &1795122269772745816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -396,6 +398,8 @@ MonoBehaviour:
   lever1: {fileID: 7322153769985599316}
   lever2: {fileID: 5275703042437681052}
   lever3: {fileID: 6727716572386491449}
+  doorUnlockClip: {fileID: 8300000, guid: 7656e79fdb86a4f43aaa8c02d41ae677, type: 3}
+  checkLevers: 1
 --- !u!1 &6706611125609538968
 GameObject:
   m_ObjectHideFlags: 0

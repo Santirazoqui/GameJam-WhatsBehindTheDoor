@@ -20,7 +20,7 @@ public class ElevatorDoor : MonoBehaviour
     [SerializeField] AudioClip elevatorMusic;
     [SerializeField] AudioClip elevatorArrivedClip;
     [SerializeField] float audioClipLengthWaitime;
-    [SerializeField] AudioSource mainAudioSource;
+    private AudioSource mainAudioSource;
     private AudioPlayer mainAudioPlayer;
     private AudioSource elevatorAudioPlayer;
 
@@ -29,6 +29,7 @@ public class ElevatorDoor : MonoBehaviour
         this.mainAudioPlayer = FindObjectOfType<AudioPlayer>();
         this.elevatorAudioPlayer = GetComponent<AudioSource>();
         this.spriteRenderer = GetComponent<SpriteRenderer>();
+        this.mainAudioSource = this.mainAudioPlayer.GetComponent<AudioSource>();
     }
 
     public void CallElevator(bool up)
@@ -54,7 +55,7 @@ public class ElevatorDoor : MonoBehaviour
         this.elevatorAudioPlayer.Play();
 
         yield return new WaitForSeconds(audioClipLengthWaitime);
-        
+
         this.mainAudioPlayer.PlayClip(this.elevatorArrivedClip, 1f);
 
         this.elevatorAudioPlayer.Stop(); 
