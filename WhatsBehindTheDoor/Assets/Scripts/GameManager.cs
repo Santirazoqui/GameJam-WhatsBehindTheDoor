@@ -26,12 +26,11 @@ public class GameManager : MonoBehaviour
         else if (doorsToUse.Count > 0)
         {
             int index = Random.Range(0, doorsToUse.Count - 1);
-            //hackaso por quedo mal la pos entre distintos prefabs. Los que estan abajo de un empry object spawnean mal 
-            //por que el empty object es el que va a la pos
-            
+            //En este caso la pos del Instantiate es porque quedo algo mal con las puertas. Las que estan abajo de un empry object spawnean mal 
+            //por que el empty object es el que va a la pos. Voy a meter todas las nuevas abajo de un empty object y dejar las primeras quietas por tiempo
 
             Instantiate(doorsToUse[index], 
-                    doorSpawnPosition,
+                    new Vector3(0, 0, 0),
                     Quaternion.identity
                     );
             doorsToUse.RemoveAt(index);

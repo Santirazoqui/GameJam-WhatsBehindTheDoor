@@ -12,11 +12,11 @@ public class LeverDoor : MonoBehaviour
 
     public void CheckLevers()
     {
-        bool lever1Down = lever1.isLeverUp();
-        bool lever2Down = lever2.isLeverUp();
-        bool lever3Down = lever3.isLeverUp();
+        bool lever1Up = lever1.isLeverUp();
+        bool lever2Up = lever2.isLeverUp();
+        bool lever3Up = lever3.isLeverUp();
 
-        if(lever1Down && lever2Down && lever3Down)
+        if(!lever1Up && !lever2Up && !lever3Up)
         {
             //play unlock sound?
             door.SetLocked(false);

@@ -175,7 +175,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 356, y: 188}
+  m_AnchoredPosition: {x: 361.9, y: 188}
   m_SizeDelta: {x: -1437.3, y: -868.5301}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7311813410454838634
@@ -791,13 +791,29 @@ PrefabInstance:
       propertyPath: leverDoor
       value: 
       objectReference: {fileID: 1795122269772745816}
+    - target: {fileID: 2364117981065468994, guid: 1a681a6877fbf7045afe40653725eccc, type: 3}
+      propertyPath: shiftLeverA
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2364117981065468994, guid: 1a681a6877fbf7045afe40653725eccc, type: 3}
+      propertyPath: shiftLeverB
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2364117981065468994, guid: 1a681a6877fbf7045afe40653725eccc, type: 3}
+      propertyPath: other_lever_a
+      value: 
+      objectReference: {fileID: 5275703042437681052}
+    - target: {fileID: 2364117981065468994, guid: 1a681a6877fbf7045afe40653725eccc, type: 3}
+      propertyPath: other_lever_b
+      value: 
+      objectReference: {fileID: 6727716572386491449}
     - target: {fileID: 5762005920694050450, guid: 1a681a6877fbf7045afe40653725eccc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.64
+      value: 2.694
       objectReference: {fileID: 0}
     - target: {fileID: 5762005920694050450, guid: 1a681a6877fbf7045afe40653725eccc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.79
+      value: 2.114
       objectReference: {fileID: 0}
     - target: {fileID: 5762005920694050450, guid: 1a681a6877fbf7045afe40653725eccc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -877,13 +893,21 @@ PrefabInstance:
       propertyPath: leverDoor
       value: 
       objectReference: {fileID: 1795122269772745816}
+    - target: {fileID: 2364117981065468994, guid: 1a681a6877fbf7045afe40653725eccc, type: 3}
+      propertyPath: other_lever_a
+      value: 
+      objectReference: {fileID: 7322153769985599316}
+    - target: {fileID: 2364117981065468994, guid: 1a681a6877fbf7045afe40653725eccc, type: 3}
+      propertyPath: other_lever_b
+      value: 
+      objectReference: {fileID: 6727716572386491449}
     - target: {fileID: 5762005920694050450, guid: 1a681a6877fbf7045afe40653725eccc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.3
+      value: 3.37
       objectReference: {fileID: 0}
     - target: {fileID: 5762005920694050450, guid: 1a681a6877fbf7045afe40653725eccc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.79
+      value: 2.114
       objectReference: {fileID: 0}
     - target: {fileID: 5762005920694050450, guid: 1a681a6877fbf7045afe40653725eccc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -955,21 +979,53 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2965382719945467953}
     m_Modifications:
+    - target: {fileID: 786496246692897324, guid: 1a681a6877fbf7045afe40653725eccc, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9dad420cd678e4240acc6c4ad8b6f95b, type: 3}
     - target: {fileID: 2304363077128472188, guid: 1a681a6877fbf7045afe40653725eccc, type: 3}
       propertyPath: m_Name
       value: Lever 3
       objectReference: {fileID: 0}
     - target: {fileID: 2364117981065468994, guid: 1a681a6877fbf7045afe40653725eccc, type: 3}
+      propertyPath: isUp
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2364117981065468994, guid: 1a681a6877fbf7045afe40653725eccc, type: 3}
       propertyPath: leverDoor
       value: 
       objectReference: {fileID: 1795122269772745816}
+    - target: {fileID: 2364117981065468994, guid: 1a681a6877fbf7045afe40653725eccc, type: 3}
+      propertyPath: shiftLeverB
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2364117981065468994, guid: 1a681a6877fbf7045afe40653725eccc, type: 3}
+      propertyPath: other_lever_a
+      value: 
+      objectReference: {fileID: 7322153769985599316}
+    - target: {fileID: 2364117981065468994, guid: 1a681a6877fbf7045afe40653725eccc, type: 3}
+      propertyPath: other_lever_b
+      value: 
+      objectReference: {fileID: 5275703042437681052}
+    - target: {fileID: 4809888956532390343, guid: 1a681a6877fbf7045afe40653725eccc, type: 3}
+      propertyPath: m_Color.b
+      value: 0.33106548
+      objectReference: {fileID: 0}
+    - target: {fileID: 4809888956532390343, guid: 1a681a6877fbf7045afe40653725eccc, type: 3}
+      propertyPath: m_Color.g
+      value: 0.90588236
+      objectReference: {fileID: 0}
+    - target: {fileID: 4809888956532390343, guid: 1a681a6877fbf7045afe40653725eccc, type: 3}
+      propertyPath: m_Color.r
+      value: 0.2509804
+      objectReference: {fileID: 0}
     - target: {fileID: 5762005920694050450, guid: 1a681a6877fbf7045afe40653725eccc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.89
+      value: 4.046
       objectReference: {fileID: 0}
     - target: {fileID: 5762005920694050450, guid: 1a681a6877fbf7045afe40653725eccc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.79
+      value: 2.114
       objectReference: {fileID: 0}
     - target: {fileID: 5762005920694050450, guid: 1a681a6877fbf7045afe40653725eccc, type: 3}
       propertyPath: m_LocalPosition.z
