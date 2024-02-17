@@ -237,6 +237,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorsToUse:
   - {fileID: 1098152909029584130, guid: 3a79414d8ddb48949b66e005b2aca197, type: 3}
+  - {fileID: 3676930851901158214, guid: 090fd77899477744ab3f97626e83f2df, type: 3}
   firstDoorsToUse:
   - {fileID: 8214101717830815759, guid: f90f33589513f3445a2e591fbd8f1fc7, type: 3}
   - {fileID: 7203059020252820356, guid: 00f722e2aa7bb9c49898eded2c42477e, type: 3}

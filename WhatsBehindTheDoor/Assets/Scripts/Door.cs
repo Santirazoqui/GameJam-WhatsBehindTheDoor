@@ -9,6 +9,8 @@ public class Door : MonoBehaviour
     private GameManager gameManager;
     private AudioPlayer audioPlayer;
 
+    [SerializeField] List<GameObject> propsToDestroy;
+
     void Awake()
     {
         this.gameManager = FindObjectOfType<GameManager>();
@@ -29,6 +31,7 @@ public class Door : MonoBehaviour
             //flip the asset somehow and play opening door sound
             StartCoroutine(Rotate());
             this.openDoorButton.SetActive(false);
+            this.DestroyProps();
         }
     }
 
@@ -54,5 +57,14 @@ public class Door : MonoBehaviour
     public void SetLocked(bool isLocked)
     {
         this.isLocked = isLocked;
+    }
+
+    private void DestroyProps()
+    {
+        if(propsToDestroy.Count == 0) { return; }
+        foreach(GameObject prop in propsToDestroy)
+        {
+            prop.SetActive(false);
+        }
     }
 }
