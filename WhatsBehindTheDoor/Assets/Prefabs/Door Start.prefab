@@ -202,6 +202,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isLocked: 0
   openDoorButton: {fileID: 9195607104450829397}
+  propsToDestroy: []
+  changeSpriteAfterFlip: 0
+  spriteAfterFlip: {fileID: 0}
 --- !u!1001 &8302014144793293594
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -298,6 +301,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2671296084547496673}
+    - target: {fileID: 8851513122574320725, guid: 98e045f265b5aae43ad7a32f4775922b, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

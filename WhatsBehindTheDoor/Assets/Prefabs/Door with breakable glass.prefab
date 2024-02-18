@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 1, b: 0.07280922, a: 0.21176471}
+  m_Color: {r: 0, g: 1, b: 0.07280922, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -191,7 +191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.056692798, g: 0.2555828, b: 0.9245283, a: 0.31764707}
+  m_Color: {r: 0.056692798, g: 0.2555828, b: 0.9245283, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -391,6 +391,8 @@ MonoBehaviour:
   isLocked: 1
   openDoorButton: {fileID: 2212277151720008807}
   propsToDestroy: []
+  changeSpriteAfterFlip: 0
+  spriteAfterFlip: {fileID: 0}
 --- !u!1 &3916807533776848862
 GameObject:
   m_ObjectHideFlags: 0
