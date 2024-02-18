@@ -187,6 +187,7 @@ MonoBehaviour:
   openDoorButton: {fileID: 8257838263229450127}
   propsToDestroy:
   - {fileID: 4690439640557951928}
+  - {fileID: 1718397508851052146}
   changeSpriteAfterFlip: 0
   spriteAfterFlip: {fileID: 0}
 --- !u!114 &3178753997488008959
