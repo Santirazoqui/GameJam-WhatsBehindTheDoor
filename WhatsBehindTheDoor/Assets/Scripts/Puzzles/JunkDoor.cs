@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class WallCodeDoor : MonoBehaviour
+public class JunkDoor : MonoBehaviour
 {
     [Header("UI")]
     [SerializeField] TextMeshProUGUI guardResponseText;
@@ -19,7 +19,7 @@ public class WallCodeDoor : MonoBehaviour
     public void CheckAnswer(string s)
     {
         string answer = s.ToLower();
-        if(answer != "3281")
+        if(answer != "6342")
         {
             StartCoroutine(GuardAnswer("Wrong!"));
         } 

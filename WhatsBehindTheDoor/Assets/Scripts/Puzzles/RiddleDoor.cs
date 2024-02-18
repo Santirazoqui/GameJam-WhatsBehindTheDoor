@@ -30,7 +30,7 @@ public class RiddleDoor : MonoBehaviour
 
     public void CheckAnswer(string s)
     {
-        string answer = s;
+        string answer = s.ToLower();
         if(answer != "please")
         {
             StartCoroutine(GuardAnswer("Wrong..."));
